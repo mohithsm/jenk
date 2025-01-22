@@ -1,6 +1,7 @@
 pipeline {
     agent any
     stages {
+        parallel {
         stage('build') {
             steps {
                 sh "sleep 5"
@@ -10,6 +11,7 @@ pipeline {
             steps {
                 sh "sleep 5"
             }
+        }
         }
           stage('test-linux') {
             steps {
