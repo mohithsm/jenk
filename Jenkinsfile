@@ -13,7 +13,7 @@ pipeline {
             }
         }
       
-     parallel {
+     
           stage('test-linux') {
             steps {
                 sh "sleep 5"
@@ -25,7 +25,7 @@ pipeline {
                 sh "sleep 5"
             }
         }
-          }
+          
     }
     
     
