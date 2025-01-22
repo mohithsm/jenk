@@ -3,18 +3,27 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'sleep 5'
+                sh "sleep 5"
             }
         }
-         stage('test') {
+          stage('test-window') {
             steps {
-                sh 'sleep 5'
+                sh "sleep 5"
             }
         }
-         stage('deploy') {
+          stage('test-linux') {
             steps {
-                sh 'sleep 5'
+                sh "sleep 5"
+
             }
         }
+          stage('deployee') {
+            steps {
+                sh "sleep 5"
+            }
+        }
+        
     }
+    
+    
 }
