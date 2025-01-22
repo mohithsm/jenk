@@ -14,7 +14,18 @@ echo "STEP3: Add jenkins package to apt "
 echo "STEP4: Update apt again"
     sudo apt update -y 
 
+echo "STEP5: install java"
+sudo apt update
+sudo apt install fontconfig openjdk-17-jre
 
-
-echo "STEP5: Final install the Jenkins"
+echo "STEP6: Final install the Jenkins"
     sudo apt-get install jenkins -y
+    
+echo "step7: enable the jenkins"
+sudo systemctl enable jenkins
+
+echo "step8: start the jenkins"
+sudo systemctl start jenkins
+
+echo "step9: status the jenkins"
+sudo systemctl status jenkins
