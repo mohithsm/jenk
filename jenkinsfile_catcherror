@@ -17,11 +17,13 @@ pipeline {
      
           stage('test-linux') {
             steps {
+            catchError(buildResult: 'sucess', stageResult: 'failure') {
                 sh """
                 sleep 5
                  exit 1
                 """
 
+            }
             }
         }
           stage('deployee') {
