@@ -3,7 +3,8 @@ echo "Initial update"
     sudo apt update -y
     
 echo "STEP1: Install JDK-11"
-    sudo apt install openjdk-11-jdk -y
+    
+    sudo apt install fontconfig openjdk-17-jre
 
 echo "STEP2: Add the apt key to add jenkins package to apt list"
     curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
