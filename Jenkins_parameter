@@ -1,8 +1,7 @@
 pipeline {
     agent any
-
         parameters {
-         string defaultValue: 'TEST', description: 'input the environment to deployee', name: 'ENV_NAME'
+         string name: 'ENV_NAME', defaultValue: 'TEST', description: 'input the environment to deployee'
        }
 parameters {
    choice choices: ['1.0', '2.0', '3.0', '4.0'], 
