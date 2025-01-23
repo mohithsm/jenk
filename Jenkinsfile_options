@@ -1,0 +1,37 @@
+
+pipeline {
+    agent any
+   options {
+     
+        timeout(time: 5, unit: 'SECONDS')
+    }
+    stages {
+       
+        stage('build') {
+            steps {
+                sh "sleep 10"
+            }
+        }
+          stage('test-window') {
+            steps {
+                sh "sleep 5"
+            }
+        }
+      
+     
+          stage('test-linux') {
+            steps {
+                sh "sleep 5"
+
+            }
+        }
+          stage('deployee') {
+            steps {
+                sh "sleep 5"
+            }
+        }
+          
+    }
+    
+    
+}
