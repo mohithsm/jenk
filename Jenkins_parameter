@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+        parameters {
+         string defaultValue: 'TEST', description: 'input the environment to deployee', name: 'ENV_NAME'
+       }
+parameters {
+   choice choices: ['1.0', '2.0', '3.0', '4.0'], 
+   description: 'ENTER THE VERSION OF BUILD TO DPLOYEE',
+   name: 'VERSION'
+}
+stages {
+  stage('DEPLOY') {
+    steps {
+    script {
+      if (${params.ENV_NAME} == 'TEST') {
+      echo "deploying to test envronment"
+          
+     }
+    else if (${params.ENV_NAME} == 'PROD') {
+    echo "deploying to prod envronment"     
+     } else {
+       echo "no such environment"
+          }
+      
+   }
+}
+ }
+}
+
+}
