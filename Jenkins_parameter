@@ -13,11 +13,11 @@ stages {
   stage('DEPLOY') {
     steps {
     script {
-      if (${params.ENV_NAME} == 'TEST') {
+      if ("${params.ENV_NAME}" == 'TEST') {
       echo "deploying to test envronment"
           
      }
-    else if (${params.ENV_NAME} == 'PROD') {
+    else if ("${params.ENV_NAME}" == 'PROD') {
     echo "deploying to prod envronment"     
      } else {
        echo "no such environment"
