@@ -16,7 +16,7 @@ pipeline {
 					try{
 						echo "Running test cases .........."
 						sh 'sleep 5'
-						sh 'exit 1'
+						
 					}catch (Exception e){
 						echo "Test case failed ........"
 						testPassed = false
